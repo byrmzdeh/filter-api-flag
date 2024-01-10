@@ -1,0 +1,203 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.big {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(233, 232, 232);
+    gap: 30px;
+
+    nav {
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .input {
+        width: 70%;
+        height: 50px;
+        display: flex;
+        border: 1px solid white;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 80px;
+        background-color: white;
+
+        i {
+            font-size: 20px;
+            padding-left: 10px;
+        }
+
+        input {
+            width: 600px;
+            height: 30;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto;
+            outline: none;
+            border: none;
+            padding: 12px;
+
+        }
+    }
+
+    .all {
+        display: flex;
+
+        .cards {
+            width: 70%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 20px;
+            text-align: center;
+
+
+            .card {
+                width: 230px;
+                height: 270px;
+                border: 0.3px solid white;
+                line-height: 30px;
+                border-radius: 10px;
+                background-color: white;
+
+                img {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+
+
+                }
+            }
+
+
+        }
+
+        .regionFilter {
+            margin: 5px 80px;
+            display: flex;
+            flex-direction: column;
+
+            li {
+                width: 200px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                line-height: 20px;
+                padding: 10px;
+                transition: 0.3s;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: rgb(255, 192, 75);
+                    color: white;
+                }
+
+            }
+
+        }
+    }
+
+    
+}
+.dark {
+    background-color: black;
+    nav {
+        background-color: black;
+    }
+
+    .input {
+        background-color: red;
+    }
+}
+
+// :root {
+//     --main-body-bg-color: rgb(245, 245, 245);
+//     --main-text-color: black;
+//     --main-navbarCardSearchFilter-bg-color: white;
+//   }
+  
+//   .dark {
+//     --main-body-bg-color: #202c36;
+//     --main-text-color: rgb(255, 255, 255);
+//     --main-navbarCardSearchFilter-bg-color: #2b3844;
+//   }
+  
+//   body {
+//     color: var(--main-text-color);
+//     .big{
+//       background-color: var(--main-body-bg-color);
+//       nav{
+//         background-color: var(--main-navbarCardSearchFilter-bg-color);
+//       }
+//     }
+//   }
+
+
+@media only screen and (max-width: 700px) {
+    body {
+        .big {
+
+            nav {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input {
+                max-width: 100%;
+                margin: auto;
+            }
+
+            .all {
+                display: flex;
+                flex-direction: column;
+                .cards{
+                    display: grid;
+                    grid-template-columns: auto;
+                    margin: 20px auto;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 700px) and  (max-width:1000px ) {
+    body {
+        .big {
+            .all {
+                display: flex;
+                flex-direction: column;
+                .cards{
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    margin: 20px auto;
+                }
+       
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) and  (max-width:1400px ) {
+    body {
+        .big {
+            .all {
+                display: flex;
+                flex-direction: column;
+                .cards{
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    margin: 20px auto;
+                }
+            }
+        }
+    }
+}
